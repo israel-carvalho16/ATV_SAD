@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Guardiãs das Águas</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" th:href="@{/contatos.css}">
+  <script src="https://cdn.userway.org/widget.js" data-account="WkxSCXRUll"></script>
+</head>
+
+<body>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <header>
+    <img style="margin-top: -15px;" th:src="@{/img/logo.png}" alt="Logo das Guardiãs das Águas">
+    <h2>Guardiãs das Águas</h2>
+
+    <nav> 
+      <ul> 
+        <li><a href="pagina1.html">Início</a></li> 
+        <li><a href="noticias.html">Notícias</a></li> 
+        <li><a href="Projeto.html">Projetos</a></li> 
+        <li><a href="Evento.html">Eventos</a></li> 
+        <li> 
+          <details> 
+            <summary id="Nucleos">Nossos Núcleos</summary> 
+            <a style="margin: -10px; padding: 5px 5px 5px;" href="MG.html">MG</a> - <a style="margin: -10px;padding: 5px 5px 5px;" href="RS.html">RS</a> - <a style="margin: -10px;padding: 5px 5px 5px;" href="CE.html">CE</a> 
+          </details> 
+        </li> 
+        <li><a href="contatos.html">Contato</a></li> 
+      </ul>
+    </nav> 
+  </header>
+
+  <section class="contact-section">
+    <h2>Entre em Contato</h2>
+    <p class="subtitle">Ficaremos felizes em ouvir você! Escolha um dos canais abaixo.</p>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="info-item">
+          <div>
+            <h4>Instagram</h4>
+            <p>@guardias.aguas</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div>
+            <h4>YouTube</h4>
+            <p>Leatox</p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="formContato" action="/contato/enviar" method="POST">
+          <div class="form-group">
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Seu e-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." rows="5" required></textarea>
+          </div>
+
+<div class="form-group">
+  <label>Avaliação (0 a 10)</label>
+  <div class="rating">
+    <input type="radio" name="avaliacao" value="0" id="r0"><label for="r0">0</label>
+    <input type="radio" name="avaliacao" value="1" id="r1"><label for="r1">1</label>
+    <input type="radio" name="avaliacao" value="2" id="r2"><label for="r2">2</label>
+    <input type="radio" name="avaliacao" value="3" id="r3"><label for="r3">3</label>
+    <input type="radio" name="avaliacao" value="4" id="r4"><label for="r4">4</label>
+    <input type="radio" name="avaliacao" value="5" id="r5"><label for="r5">5</label>
+    <input type="radio" name="avaliacao" value="6" id="r6"><label for="r6">6</label>
+    <input type="radio" name="avaliacao" value="7" id="r7"><label for="r7">7</label>
+    <input type="radio" name="avaliacao" value="8" id="r8"><label for="r8">8</label>
+    <input type="radio" name="avaliacao" value="9" id="r9"><label for="r9">9</label>
+    <input type="radio" name="avaliacao" value="10" id="r10"><label for="r10">10</label>
+  </div>
+</div>
+  
+          <button type="submit">Enviar mensagem</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contatos">
+    <h2>Orgãos Ambientais</h2>
+    <a id="link_D" href="orgaoambiental.html">saiba mais</a>
+  </section>
+
+  <footer class="footer-site">
+    <p>© 2025 Guardiãs das Águas. Todos os direitos reservados.</p>
+    <div class="redes-sociais">
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn-socio-yt" aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-socio-insta" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </footer>
+
+  <section class="colaboradores-section">
+    <h4 class="titulo-centralizado">COLABORADORES</h4>
+    <div class="colaboradores">
+      <img th:src="@{/img/Link do site PLEASE (1).png}" alt="Nossos colaboradores">
+    </div>
+  </section>
+</body>
+
+</html>

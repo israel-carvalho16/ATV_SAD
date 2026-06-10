@@ -1,0 +1,371 @@
+/* ==========================================================================
+   1. VARIÁVEIS DE CORES E CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
+:root {
+  --roxo-logo: #8e6db5;
+  --azul1: #91a4ce;
+  --azul2: #91b0d4;
+  --azul3: #92bedb;
+  --roxo-principal: #5b289e;
+  --roxo-secundario: #8f73b2;
+  --lilas: #dedae0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO GLOBAL (Menu de Navegação)
+   ========================================================================== */
+header {
+  background-color: var(--roxo-principal);
+  color: white;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+header .brand-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 90%;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+header img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+header h2 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+header nav {
+  width: 90%;
+  max-width: 1200px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #B48FE9;
+  padding: 6px 25px;
+  border-radius: 30px;
+  margin: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li a, 
+.nav-links li summary {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav-links li a:hover, 
+.nav-links li summary:hover {
+  background-color: white;
+  color: var(--roxo-principal);
+}
+
+header nav ul li details {
+  position: relative;
+}
+
+header nav ul li details[open] summary {
+  background-color: white;
+  color: var(--roxo-principal);
+  border-radius: 20px;
+}
+
+/* ==========================================================================
+   3. CONTEÚDO ESPECÍFICO DA PÁGINA DE CONTATO
+   ========================================================================== */
+.contact-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 5px;
+  color: var(--roxo-principal);
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  max-width: 700px;
+  background: #ffffff;
+  border: 2px solid var(--azul2);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.info-item h4 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--roxo-principal);
+}
+
+.info-item p {
+  color: #555;
+  margin: 3px 0 0;
+}
+
+.contact-form {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--roxo-principal);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  background: var(--roxo-principal);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contact-form button:hover {
+  background: var(--roxo-secundario);
+}
+
+.rating {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.rating label:hover {
+  transform: scale(1.1);
+}
+
+#contatos {
+  font-size: 13px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* ==========================================================================
+   4. RODAPÉ (Footer Premium) E COLABORADORES
+   ========================================================================== */
+.footer-site {
+  background-color: var(--roxo-principal);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-site p {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  opacity: 0.85;
+}
+
+.footer-site .redes-sociais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-site .redes-sociais a {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.footer-site .redes-sociais a.btn-socio-yt:hover {
+  background-color: #ff0000;
+  border-color: #ff0000;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}
+
+.footer-site .redes-sociais a.btn-socio-insta:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-color: transparent;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(220, 39, 67, 0.4);
+}
+
+/* Seção de Colaboradores */
+.colaboradores-section {
+  background-color: var(--azul1);
+  padding: 30px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.titulo-centralizado {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.colaboradores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colaboradores img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   5. RESPONSIVIDADE (Media Queries)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section h2 {
+    font-size: 26px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 18px;
+  }
+
+  .rating label {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+}
